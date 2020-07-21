@@ -1,6 +1,6 @@
 
 var OneSignal_launchString = "";
-var OneSignal_JSBridge = new OneSignalSDK_WP_WNS_WRTC.WinJSBridge();
+var OneSignal_JSBridge = new OneSignalSDK_UWP_WNS_WRTC.WinJSBridge();
 var OneSignal_app_id = null;
 var OneSignal_opened_callback = null;
 
@@ -21,11 +21,11 @@ WinJS.Application.addEventListener("activated", onActivatedHandler, false);
 
 var cordova = require('cordova'),
     OneSignal = require('./OneSignal');
-    
+
 module.exports = {
   init: function(successCallback, errorCallback, params) {
     OneSignal_app_id = params[0];
-    
+
     OneSignal_JSBridge.addEventListener("notificationopened", function (e) {
         var additionalData = e.additionalData;
 
@@ -35,7 +35,7 @@ module.exports = {
         var newData = { message: e.message, additionalData: additionalData, isActive: e.isActive };
         OneSignal_opened_callback(newData, { keepCallback: true });
     });
-    
+
     OneSignal_JSBridge.init(OneSignal_app_id, OneSignal_launchString);
   },
 
@@ -57,7 +57,7 @@ module.exports = {
 
       OneSignal_JSBridge.getids();
   },
-  
+
   deleteTags: function (successCallback, errorCallback, params) {
       OneSignal_JSBridge.deletetags(JSON.stringify(params));
   },

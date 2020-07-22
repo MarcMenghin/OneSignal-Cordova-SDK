@@ -96,7 +96,7 @@ OneSignal.prototype.endInit = function() {
     cordova.exec(OneSignal._notificationOpenedDelegate, function(){}, "OneSignalPush", "setNotificationOpenedHandler", []);
     cordova.exec(OneSignal._inAppMessageClickDelegate, function() {}, "OneSignalPush", "setInAppMessageClickHandler", []);
     //Call Init
-    cordova.exec(function() {}, function(){}, "OneSignalPush", "init", [OneSignal._appID, OneSignal._googleProjectNumber, OneSignal._iOSSettings, OneSignal._displayOption]);
+    cordova.exec(function() {}, function(err){console.err("Error initializing onesignal", err);}, "OneSignalPush", "init", [OneSignal._appID, OneSignal._googleProjectNumber, OneSignal._iOSSettings, OneSignal._displayOption]);
 };
 
 OneSignal._processFunctionList = function(array, param) {

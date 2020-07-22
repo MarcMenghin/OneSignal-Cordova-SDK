@@ -18,10 +18,6 @@ function onActivatedHandler(args) {
 }
 WinJS.Application.addEventListener("activated", onActivatedHandler, false);
 
-
-var cordova = require('cordova'),
-    OneSignal = require('./OneSignal');
-
 module.exports = {
   init: function(successCallback, errorCallback, params) {
     OneSignal_app_id = params[0];

@@ -108,7 +108,6 @@
 
     <framework src="src/windows/OneSignalSDK_UWP_WNS_WRTC.winmd" custom="true" />
     <framework src="src/windows/OneSignalSDK_UWP_WNS.dll" custom="true" />
-    <framework src="src/windows/Newtonsoft.Json.dll" custom="true" />
   </platform>
 
 </plugin>

@@ -112,7 +112,6 @@
     <framework src="src/windows/Microsoft.Toolkit.Uwp.Notifications.dll" custom="true" />
     <framework src="src/windows/System.ComponentModel.TypeConverter.dll" custom="true" />
     <framework src="src/windows/System.Runtime.Serialization.Formatters.dll" custom="true" />
-    <framework src="src/windows/System.Linq.Expressions.dll" custom="true" />
   </platform>
 
 </plugin>
